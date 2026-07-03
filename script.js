@@ -184,3 +184,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 
 });
+/*==================================================
+            EXPERIENCE ACCORDION JS
+==================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('.exp-row');
+    
+    rows.forEach(row => {
+        row.addEventListener('click', () => {
+            const parentGroup = row.parentElement;
+            
+            // Close other open accordions (optional)
+            document.querySelectorAll('.exp-row-group').forEach(group => {
+                if(group !== parentGroup) {
+                    group.classList.remove('active');
+                }
+            });
+
+            // Toggle current accordion
+            parentGroup.classList.toggle('active');
+        });
+    });
+});
