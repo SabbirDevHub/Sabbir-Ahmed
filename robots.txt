@@ -1,0 +1,15 @@
+# Robots.txt for Sabbir Ahmed Portfolio
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and private directories (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://github.com/SabbirDevHub/Sabbir-Ahmed/sitemap.xml
