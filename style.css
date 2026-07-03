@@ -925,24 +925,136 @@ width:260px;
     font-size: 1rem;
 }
 
+
 /*==================================================
-                EXPERIENCE RESPONSIVE
+            EXPERIENCE TABLE CSS
 ==================================================*/
-@media(max-width: 768px) {
-    .timeline::before {
-        left: 15px;
+
+.exp-table-container {
+    width: 100%;
+    border: 1px solid var(--heading);
+    background: var(--card);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.exp-header {
+    display: flex;
+    background: var(--heading);
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.exp-row {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.exp-row:hover {
+    background: var(--section);
+}
+
+.exp-col {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--border);
+}
+
+.exp-header .exp-col {
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.exp-col:last-child {
+    border-right: none;
+}
+
+/* Column Widths */
+.col-period { width: 25%; font-family: monospace; font-size: 0.9rem; color: #FFFFFF; transition: color 0.3s ease; }
+.col-role { width: 40%; font-weight: 700; color: #FFFFFF; justify-content: space-between; transition: color 0.3s ease; }
+.col-company { width: 20%; font-weight: 600; color: #FFFFFF; transition: color 0.3s ease; }
+.col-type { width: 15%; justify-content: center; }
+
+.col-role i {
+    transition: transform 0.3s ease;
+    color: var(--primary);
+}
+
+.badge-type {
+    border: 1px solid var(--heading);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--heading);
+}
+
+/* Accordion Details */
+.exp-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, background 0.3s ease;
+    background: #f8fafc;
+    border-bottom: 1px solid var(--border);
+}
+
+.details-content {
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease-out;
+    color: var(--body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Active State */
+.exp-row-group.active .exp-details {
+    max-height: 500px; /* Adjust if content is very long */
+}
+
+.exp-row-group.active .details-content {
+    padding: 25px 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exp-row-group.active .col-role i {
+    transform: rotate(180deg);
+}
+
+/* Hover effect for Period, Role, Company */
+.exp-row:hover .col-period,
+.exp-row:hover .col-role,
+.exp-row:hover .col-company {
+    color: var(--primary);
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+    .exp-header { display: none; }
+    
+    .exp-row {
+        flex-direction: column;
+        padding: 15px;
     }
     
-    .timeline-dot {
-        left: 6px;
+    .exp-col {
+        width: 100% !important;
+        padding: 8px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
     }
     
-    .timeline-item {
-        padding-left: 45px;
-    }
-    
-    .timeline-content {
-        padding: 20px;
+    .exp-col:last-child {
+        border-bottom: none;
+        justify-content: flex-start;
+        margin-top: 10px;
     }
 }
 /*==================================================
