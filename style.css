@@ -940,8 +940,8 @@ width:260px;
 
 .exp-header {
     display: flex;
-    background: var(--heading);
-    color: var(--bg);
+    background: #000000;
+    color: #FFFFFF;
     font-weight: 700;
     font-size: 0.85rem;
     letter-spacing: 1px;
@@ -959,6 +959,11 @@ width:260px;
     background: var(--section);
 }
 
+/* Header row hover effect - slightly darker */
+.exp-header .exp-col:hover {
+    background: #1a1a1a;
+}
+
 .exp-col {
     padding: 20px;
     display: flex;
@@ -968,6 +973,11 @@ width:260px;
 
 .exp-header .exp-col {
     border-right: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.3s ease;
+}
+
+.exp-header:hover {
+    background: #1a1a1a;
 }
 
 .exp-col:last-child {
@@ -975,9 +985,9 @@ width:260px;
 }
 
 /* Column Widths */
-.col-period { width: 25%; font-family: monospace; font-size: 0.9rem; color: #FFFFFF; transition: color 0.3s ease; }
-.col-role { width: 40%; font-weight: 700; color: #FFFFFF; justify-content: space-between; transition: color 0.3s ease; }
-.col-company { width: 20%; font-weight: 600; color: #FFFFFF; transition: color 0.3s ease; }
+.col-period { width: 25%; font-family: monospace; font-size: 0.9rem; color: var(--body); }
+.col-role { width: 40%; font-weight: 700; color: var(--heading); justify-content: space-between; }
+.col-company { width: 20%; font-weight: 600; color: var(--body); }
 .col-type { width: 15%; justify-content: center; }
 
 .col-role i {
@@ -1026,13 +1036,6 @@ width:260px;
 
 .exp-row-group.active .col-role i {
     transform: rotate(180deg);
-}
-
-/* Hover effect for Period, Role, Company */
-.exp-row:hover .col-period,
-.exp-row:hover .col-role,
-.exp-row:hover .col-company {
-    color: var(--primary);
 }
 
 /* Responsive */
