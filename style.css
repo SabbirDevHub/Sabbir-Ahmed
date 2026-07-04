@@ -1909,3 +1909,363 @@ width:260px;
         padding: 50px 20px;
     }
 }
+/*==================================================
+                CONTACT SECTION CSS
+==================================================*/
+
+.contact-section {
+    background: var(--section);
+}
+
+.contact-wrapper {
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 200px; /* 3 Columns: Profile/Cal, Form, Time Slots */
+    overflow: hidden;
+}
+
+/* --- LEFT COLUMN --- */
+.contact-left {
+    padding: 40px;
+    background: var(--card);
+    border-right: 1px solid var(--border);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--heading);
+    letter-spacing: 1px;
+}
+
+.contact-heading {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    color: var(--heading);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.contact-bio {
+    color: var(--body);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.meeting-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.meeting-meta span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Calendar Styles */
+.calendar-ui {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    background: var(--bg);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--section);
+    color: var(--heading);
+    transition: var(--transition);
+}
+
+.calendar-header button:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.calendar-header h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--heading);
+    text-transform: uppercase;
+}
+
+.days-grid, .dates-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+.days-grid span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--body);
+    margin-bottom: 10px;
+}
+
+.date-btn {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--heading);
+    transition: var(--transition);
+}
+
+.date-btn:hover:not(.disabled) {
+    background: var(--section);
+    color: var(--primary);
+}
+
+.date-btn.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+.date-btn.disabled {
+    color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+.timezone-info {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: var(--body);
+    text-align: center;
+    font-weight: 500;
+}
+
+/* --- MIDDLE COLUMN (FORM) --- */
+.contact-right {
+    padding: 40px;
+    background: var(--section);
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.sub-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-header h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--heading);
+}
+
+.selected-time-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--card);
+    border: 1px solid var(--primary);
+    padding: 15px 20px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary);
+}
+
+.time-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.time-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--body);
+    text-transform: uppercase;
+    display: block;
+}
+
+.time-details h4 {
+    font-size: 1rem;
+    color: var(--heading);
+    margin-top: 3px;
+}
+
+.project-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card);
+    color: var(--body);
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* --- RIGHT COLUMN (TIME SLOTS) --- */
+.time-slots-container {
+    padding: 40px 20px;
+    background: var(--card);
+    border-left: 1px solid var(--border);
+}
+
+.time-slots-container h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--heading);
+}
+
+.slots-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.slots-list::-webkit-scrollbar {
+    width: 4px;
+}
+.slots-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.slot-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.slot-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.slot-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width: 1200px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .time-slots-container {
+        grid-column: 1 / -1;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding: 30px;
+    }
+    .slots-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .slot-btn {
+        width: calc(25% - 10px);
+    }
+}
+
+@media(max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .project-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contact-left, .contact-right {
+        padding: 30px 20px;
+    }
+    .slot-btn {
+        width: calc(33.33% - 10px);
+    }
+}
