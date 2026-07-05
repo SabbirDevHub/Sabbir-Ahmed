@@ -1,0 +1,115 @@
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+        
+        <div class="contact-wrapper">
+            
+            <div class="contact-left">
+                <div class="profile-header">
+                    <img src="assets/images/profile-placeholder.png" alt="Sabbir Ahmed" class="contact-avatar">
+                    <span class="contact-name">SABBIR AHMED</span>
+                </div>
+                
+                <h2 class="contact-heading">BOOK A QUICK CALL</h2>
+                <p class="contact-bio">Product Designer & Software Engineer • Building scalable digital products and human-centered ecosystems.</p>
+                
+                <div class="meeting-meta">
+                    <span><i class="fa-regular fa-clock"></i> 30M</span>
+                    <span><i class="fa-solid fa-video"></i> GOOGLE MEET</span>
+                </div>
+
+                <div class="calendar-ui">
+                    <div class="calendar-header">
+                        <button id="prev-month"><i class="fa-solid fa-chevron-left"></i></button>
+                        <h4 id="current-month-year">July 2026</h4>
+                        <button id="next-month"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    
+                    <div class="calendar-body">
+                        <div class="days-grid">
+                            <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+                        </div>
+                        <div class="dates-grid" id="dates-grid">
+                            </div>
+                    </div>
+                    
+                    <div class="timezone-info">
+                        Bangladesh Time (GMT+6)
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <div class="form-header">
+                    <span class="sub-label">TELL ME ABOUT YOUR PROJECT</span>
+                    <h2>HAVE A PROJECT IDEA IN MIND?</h2>
+                </div>
+
+                <div class="selected-time-box">
+                    <div class="time-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <div class="time-details">
+                        <span class="time-label">SELECTED TIME SLOT</span>
+                        <h4 id="selected-datetime-display">Please select a date and time</h4>
+                    </div>
+                </div>
+
+                <form id="project-form" class="project-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">NAME *</label>
+                            <input type="text" id="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL *</label>
+                            <input type="email" id="email" placeholder="name@company.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">SERVICE *</label>
+                        <select id="service" required>
+                            <option value="" disabled selected>Select a service...</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Mobile App Design">Mobile App Design</option>
+                            <option value="Product Design">Product Design</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">LOCATION *</label>
+                            <input type="text" id="location" placeholder="City, Country" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">BUDGET (USD) *</label>
+                            <input type="number" id="budget" placeholder="e.g. 5000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">ABOUT THE PROJECT *</label>
+                        <textarea id="details" rows="4" placeholder="Tell me a bit about your project goals and requirements..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        SEND PROJECT DETAILS <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+
+            </div>
+            
+            <div class="time-slots-container">
+                <h4>AVAILABLE TIMES</h4>
+                <div class="slots-list" id="slots-list">
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

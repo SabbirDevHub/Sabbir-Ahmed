@@ -2,1127 +2,973 @@
 <html lang="en">
 
 <head>
-
     <!-- ==========================
-         Basic SEO
+         Basic SEO & Meta
     =========================== -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sabbir Ahmed | Software Engineer | Product Designer</title>
-
-    <meta name="description"
-        content="Official portfolio of Sabbir Ahmed - Software Engineer, Product Designer, Undergraduate Researcher.">
-
-    <meta name="keywords"
-        content="Sabbir Ahmed, Portfolio, UIU, Software Engineer, Product Designer, Research">
-
+    <title>Sabbir Ahmed | Software Engineer & Product Designer</title>
+    <meta name="description" content="Official portfolio of Sabbir Ahmed - Software Engineer, Product Designer, and Undergraduate Researcher specializing in scalable digital solutions and human-centered design.">
+    <meta name="keywords" content="Sabbir Ahmed, Portfolio, UIU, Software Engineer, Product Designer, Research, Tech Startup">
     <meta name="author" content="Sabbir Ahmed">
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Sabbir Ahmed | Software Engineer & Product Designer">
+    <meta property="og:description" content="Explore the portfolio of Sabbir Ahmed, featuring case studies, software projects, and research publications.">
+    <meta property="og:image" content="assets/images/og-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Sabbir Ahmed | Software Engineer & Product Designer">
+    <meta property="twitter:description" content="Explore the portfolio of Sabbir Ahmed, featuring case studies, software projects, and research publications.">
+    <meta property="twitter:image" content="assets/images/og-preview.jpg">
 
     <!-- ==========================
          Google Fonts
     =========================== -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- ==========================
-         Font Awesome
+         Font Awesome (Deferred for Performance)
     =========================== -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
 
     <!-- ==========================
          CSS
     =========================== -->
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-   
     <!-- ==========================================
-                    SCROLL PROGRESS
+         SCROLL PROGRESS
     =========================================== -->
-
-    <div id="progress-bar"></div>
+    <div id="progress-bar" aria-hidden="true"></div>
 
     <!-- ==========================================
-                    HEADER
+         HEADER
     =========================================== -->
-
     <header class="header">
-
-        <nav class="navbar container">
-
-            <a href="#" class="logo">
-
+        <nav class="navbar container" aria-label="Main Navigation">
+            <a href="#" class="logo" aria-label="Go to homepage">
                 SABBIR<span>.</span>
-
             </a>
-
             <ul class="nav-links">
-
                 <li><a href="#home">Home</a></li>
-
                 <li><a href="#about">About</a></li>
-
                 <li><a href="#experience">Experience</a></li>
-
                 <li><a href="#projects">Projects</a></li>
-
                 <li><a href="#research">Research</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
-
             <div class="nav-actions">
-
-                <button id="theme-toggle">
-
-                    <i class="fa-solid fa-moon"></i>
-
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
                 </button>
-
-                <button class="menu-btn">
-
-                    <i class="fa-solid fa-bars"></i>
-
+                <button class="menu-btn" aria-label="Open mobile menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
-
             </div>
-
         </nav>
-
     </header>
 
     <!-- ==========================================
-                    HERO SECTION
+         HERO SECTION
     =========================================== -->
-
     <section class="hero" id="home">
-
         <div class="container hero-container">
-
-            <!-- LEFT -->
-
             <div class="hero-left">
-
-                <span class="hero-tag">
-
-                    PRODUCT DESIGNER • SOFTWARE ENGINEER • RESEARCHER
-
-                </span>
-
-                <h1>
-
-                    Hi, I'm
-
-                    <span>Sabbir Ahmed</span>
-
-                </h1>
-
-                <h2>
-
-                    <span id="typing-text"></span>
-
-                </h2>
-
+                <span class="hero-tag">PRODUCT DESIGNER • SOFTWARE ENGINEER • RESEARCHER</span>
+                <h1>Hi, I'm <span>Sabbir Ahmed</span></h1>
+                <h2 aria-live="polite"><span id="typing-text"></span><span class="sr-only">Product Designer and Software Developer</span></h2>
                 <p>
-
-                    A CSE student passionate about research, software engineering,
-                    and product design. I enjoy building user-centered digital
-                    products, exploring emerging technologies, and transforming
-                    ideas into impactful, scalable solutions.
-
+                    A CSE student passionate about research, software engineering, and product design. I enjoy building user-centered digital products, exploring emerging technologies, and transforming ideas into impactful, scalable solutions.
                 </p>
-
                 <div class="hero-buttons">
-
-                    <a href="#projects" class="btn btn-primary">
-
-                        View Projects
-
-                    </a>
-
-                    <a href="#" class="btn btn-secondary">
-
-                        Download Resume
-
-                    </a>
-
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-secondary">Download Resume</a>
                 </div>
-
-                <!-- SOCIAL -->
-
                 <div class="social-icons">
-
-                    <a href="#"><i class="fab fa-github"></i></a>
-
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                    <a href="#"><i class="fab fa-behance"></i></a>
-
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-
+                    <a href="#" aria-label="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Behance Portfolio"><i class="fab fa-behance" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Facebook Profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                 </div>
-
             </div>
-
-            <!-- RIGHT -->
-
             <div class="hero-right">
-
                 <div class="image-wrapper">
-
-                    <img src="assets/images/profile-placeholder.png"
-                        alt="Sabbir Ahmed">
-
-                    <div class="floating-card card-one">
-
-                       Product Design
-
-                    </div>
-
-                    <div class="floating-card card-two">
-
-                        Research
-
-                    </div>
-
-                    <div class="floating-card card-three">
-
-                        Software Development
-
-                    </div>
-
+                    <img src="assets/images/profile-placeholder.png" alt="Portrait of Sabbir Ahmed">
+                    <div class="floating-card card-one" aria-hidden="true">Product Design</div>
+                    <div class="floating-card card-two" aria-hidden="true">Research</div>
+                    <div class="floating-card card-three" aria-hidden="true">Software Development</div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- ==========================================
-                    About SECTION
+         ABOUT SECTION
     =========================================== -->
-<section id="about" class="about section-padding">
-    <div class="container about-container">
-        
-        
-
-        <div class="about-content">
-            <span class="section-subtitle">Discover More</span>
-            <h2 class="section-title">About <span>Me</span></h2>
-            
-            <p class="about-text">
-                I'm <strong>Sabbir Ahmed</strong>, a third-year BSc in Computer Science & Engineering student at United International University (UIU), Bangladesh, with a strong passion for Software Engineering, Product Design, and Research. I enjoy building scalable software, designing intuitive digital experiences, and exploring human-centered technologies that solve real-world problems.
-            </p>
-            
-            <p class="about-text">
-                My interests span Full Stack Web Development, Human-Computer Interaction (HCI), Artificial Intelligence, UI/UX Design, Accessibility, and Human-Centered Design. I believe great technology is created by combining technical excellence with thoughtful design and user-focused research.
-            </p>
-            
-            <p class="about-text">
-                Beyond academics, I've actively contributed to leadership and community initiatives through campus organizations, ambassador programs, workshops, and volunteer activities. I'm continuously learning, researching, and building to grow as a software engineer and product designer, with the goal of creating impactful digital solutions on a global scale.
-            </p>
-
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h3 class="stat-number">15+</h3>
-                    <p class="stat-text">Projects Completed</p>
-                </div>
-                <div class="stat-box">
-                    <h3 class="stat-number">05+</h3>
-                    <p class="stat-text">Community Roles</p>
-                </div>
-                <div class="stat-box">
-                    <h3 class="stat-number">10+</h3>
-                    <p class="stat-text">Tech Workshops</p>
+    <section id="about" class="about section-padding">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-subtitle">Discover More</span>
+                <h2 class="section-title">About <span>Me</span></h2>
+                <p class="about-text">
+                    I'm <strong>Sabbir Ahmed</strong>, a third-year BSc in Computer Science & Engineering student at United International University (UIU), Bangladesh, with a strong passion for Software Engineering, Product Design, and Research. I enjoy building scalable software, designing intuitive digital experiences, and exploring human-centered technologies that solve real-world problems.
+                </p>
+                <p class="about-text">
+                    My interests span Full Stack Web Development, Human-Computer Interaction (HCI), Artificial Intelligence, UI/UX Design, Accessibility, and Human-Centered Design. I believe great technology is created by combining technical excellence with thoughtful design and user-focused research.
+                </p>
+                <p class="about-text">
+                    Beyond academics, I've actively contributed to leadership and community initiatives through campus organizations, ambassador programs, workshops, and volunteer activities. I'm continuously learning, researching, and building to grow as a software engineer and product designer, with the goal of creating impactful digital solutions on a global scale.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3 class="stat-number">15+</h3>
+                        <p class="stat-text">Projects Completed</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 class="stat-number">05+</h3>
+                        <p class="stat-text">Community Roles</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 class="stat-number">10+</h3>
+                        <p class="stat-text">Tech Workshops</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-</section>
-<!-- ==========================================
-                experience
-    =========================================== -->
- <section id="experience" class="experience section-padding">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">Professional <span>Experience</span></h2>
-        </div>
-
-        <div class="exp-table-container">
-            <div class="exp-header">
-                <div class="exp-col col-period">PERIOD</div>
-                <div class="exp-col col-role">ROLE</div>
-                <div class="exp-col col-company">COMPANY</div>
-                <div class="exp-col col-type">TYPE</div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">JAN 2026 - PRESENT</div>
-                    <div class="exp-col col-role">
-                        CAMPUS AMBASSADOR <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">PHITRON</div>
-                    <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        As a Campus Ambassador at Phitron, I promoted the organization's programs and initiatives within my university by connecting with students, increasing awareness of learning opportunities, and encouraging participation in events and campaigns. I organized promotional activities, supported community engagement, and served as a bridge between Phitron and the student community while strengthening my leadership, communication, and networking skills.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">DEC 2024 - PRESENT</div>
-                    <div class="exp-col col-role">
-                        PRODUCT DESIGNER <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">FIVERR</div>
-                    <div class="exp-col col-type"><span class="badge-type">FREELANCE</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        As a Product Designer on Fiverr, I collaborated with clients to transform ideas into user-centered digital products by designing intuitive and visually appealing interfaces. I conducted user research, created wireframes, prototypes, and high-fidelity UI designs, while focusing on usability, accessibility, and responsive design. I worked closely with client requirements, incorporated feedback throughout the design process, and delivered solutions that balanced user needs with business goals.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">OCT 2024 - PRESENT</div>
-                    <div class="exp-col col-role">
-                        COMMUNITY MANAGER <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">UIU DEVELOPERS HUB</div>
-                    <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        I organized "Hackday," the biggest event of the university's CES department. Additionally, my responsibilities include discussing student development, providing assistance, and keeping track of their progress.As a **Community Manager at UIU Developers Hub**, I fostered an engaging and collaborative community by connecting students, facilitating discussions, and encouraging knowledge sharing among members. I supported the planning and promotion of events, managed community engagement across online and offline platforms, addressed member queries, and helped create an inclusive environment that strengthened participation and collaboration.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">DEC 2024 - APR 2026</div>
-                    <div class="exp-col col-role">
-                        ASSOCIATE (R&D WING) <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">UIU COMPUTER CLUB</div>
-                    <div class="exp-col col-type"><span class="badge-type">FULLTIME</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        I organized "Coders Combat," the largest event for the university's CSE department, and "Career Adda," a collaboration with Programming Hero and the UIU Computer Club. Additionally, my responsibilities included discussing and supporting students' professional development, tracking their progress, addressing their needs, and organizing workshops. As a **Community Manager at UIU Developers Hub**, I fostered an engaging and collaborative community by connecting students, facilitating discussions, and encouraging knowledge sharing among members. I supported event planning and promotion, managed community engagement across online and offline platforms, addressed member queries, and helped create an inclusive environment that strengthened participation and collaboration.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">FEB 2023 - DEC 2025</div>
-                    <div class="exp-col col-role">
-                        CAMPUS HERO <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">PROGRAMMING HERO</div>
-                    <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        Programming Hero এন্ড UIU Computer Club এর কলাবোরেশন করে "ক্যারিয়ার আড্ডা" ইভেন্ট আয়োজন করেছিলাম। এছাড়াও স্টুডেন্টদের ডেভেলপমেন্ট নিয়ে আলোচনা করা, হেল্প করা, তাদের আপডেট নেওয়ার কাজ করতে হয়েছে আমাকে, স্টুডেন্টদের কোনো চাহিদা পূরণ করা, ওয়ার্কশপ আয়জন করার কাজ করতে হয়েছে। I contributed to research-driven initiatives, collaborated with team members to develop innovative ideas and technical solutions, and supported the planning and execution of programming-related activities.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">MAY 2024 - JAN 2025</div>
-                    <div class="exp-col col-role">
-                        PROJECT ASSOCIATE <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">FARHANAS' BRAINSTATION</div>
-                    <div class="exp-col col-type"><span class="badge-type">PART-TIME</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        As a Project Associate at Farhanas' Brainstation, I supported the planning, coordination, and execution of educational and organizational projects. I collaborated with team members to manage project activities, assisted in organizing events and campaigns, communicated with stakeholders, and contributed to ensuring that project goals were achieved efficiently while strengthening my organizational, teamwork, and communication skills.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">NOV 2023 - DEC 2023</div>
-                    <div class="exp-col col-role">
-                        ASSOCIATE (GRAPHICS) <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">YSSE</div>
-                    <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        In this position, I lead the interns and management Trainees in Graphics Design on how they can make their visuals better and more creative. Apart from this, the interns and management Trainee of the graphic design department collected various data and provided visuals to different wings on time.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">JUL 2023 - NOV 2023</div>
-                    <div class="exp-col col-role">
-                        CAMPUS AMBASSADOR <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">BYSDO</div>
-                    <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        As a Campus Ambassador at the Bangladesh Youth Skills Development Organization, I promoted the organization's skill development initiatives and opportunities within my university by engaging with students, raising awareness about programs and events, and encouraging active participation. I represented the organization on campus, supported outreach campaigns, and helped build a stronger student community.
-                    </div>
-                </div>
-            </div>
-
-            <div class="exp-row-group">
-                <div class="exp-row">
-                    <div class="exp-col col-period">MAR 2023 - JUL 2023</div>
-                    <div class="exp-col col-role">
-                        MANAGEMENT TRAINEE <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="exp-col col-company">YSSE</div>
-                    <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
-                </div>
-                <div class="exp-details">
-                    <div class="details-content">
-                        Here, I lead the interns on how they can make their visuals better and more creative. Apart from this, the interns of the graphic design department collected various data and provided visuals to different wings on time.
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==========================================
-                Projects
-    =========================================== -->
-        <section id="projects" class="projects section-padding">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <span class="section-subtitle">Portfolio</span>
-            <h2 class="section-title">Featured <span>Projects</span></h2>
-        </div>
-
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>Skill Binimoy SRS</h3>
-                        <span class="project-role">Project Leader</span>
-                    </div>
-                    <p class="project-desc">
-                        A peer-to-peer learning platform enabling users to exchange skills and knowledge without monetary transactions. Managed overall development, focusing on functional/non-functional requirements, system architecture, and development guidelines.
-                    </p>
-                    <div class="project-tags">
-                        <span>System Architecture</span>
-                        <span>SRS</span>
-                        <span>Learning Platform</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>Nagarik Kotha</h3>
-                        <span class="project-role">Project Leader</span>
-                    </div>
-                    <p class="project-desc">
-                        A secure, database-driven web application designed to modernize crime reporting and evidence management. Emphasizes database normalization, data integrity, and role-based access control using MySQL as the backend DBMS.
-                    </p>
-                    <div class="project-tags">
-                        <span>MySQL</span>
-                        <span>Web App</span>
-                        <span>Access Control</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>SmartFruitSorter</h3>
-                        <span class="project-role">AI/Hardware Developer</span>
-                    </div>
-                    <p class="project-desc">
-                        An AI-powered smart fruit sorting system automating fruit classification based on ripeness and quality. Integrates a conveyor belt, Raspberry Pi, Arduino, and a servo-driven robotic arm using Machine Learning and Computer Vision.
-                    </p>
-                    <div class="project-tags">
-                        <span>Machine Learning</span>
-                        <span>Computer Vision</span>
-                        <span>IoT / Arduino</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3>GoLink BD</h3>
-                        <span class="project-role">Tech Startup Ecosystem</span>
-                    </div>
-                    <p class="project-desc">
-                        A leading Bangladeshi tech startup offering ride-sharing, food delivery, and courier services through a secure cross-platform mobile and web ecosystem. Built a scalable, user-friendly environment with robust digital solutions.
-                    </p>
-                    <div class="project-tags">
-                        <span>Cross-Platform</span>
-                        <span>Mobile App</span>
-                        <span>Web Ecosystem</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
     </section>
 
-
-<!-- ==========================================
-                RESEARCH SECTION
+    <!-- ==========================================
+         EXPERIENCE SECTION
     =========================================== -->
-<section id="research" class="research section-padding">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <span class="section-subtitle">Publications & UX Research</span>
-            <h2 class="section-title">Research & <span>Case Studies</span></h2>
+    <section id="experience" class="experience section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Professional <span>Experience</span></h2>
+            </div>
+            <div class="exp-table-container">
+                <div class="exp-header" aria-hidden="true">
+                    <div class="exp-col col-period">PERIOD</div>
+                    <div class="exp-col col-role">ROLE</div>
+                    <div class="exp-col col-company">COMPANY</div>
+                    <div class="exp-col col-type">TYPE</div>
+                </div>
+
+                <!-- Experience Row 1 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-1" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">JAN 2026 - PRESENT</div>
+                        <div class="exp-col col-role">
+                            CAMPUS AMBASSADOR <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">PHITRON</div>
+                        <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-1">
+                        <div class="details-content">
+                            As a Campus Ambassador at Phitron, I promoted the organization's programs and initiatives within my university by connecting with students, increasing awareness of learning opportunities, and encouraging participation in events and campaigns. I organized promotional activities, supported community engagement, and served as a bridge between Phitron and the student community while strengthening my leadership, communication, and networking skills.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 2 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-2" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">DEC 2024 - PRESENT</div>
+                        <div class="exp-col col-role">
+                            PRODUCT DESIGNER <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">FIVERR</div>
+                        <div class="exp-col col-type"><span class="badge-type">FREELANCE</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-2">
+                        <div class="details-content">
+                            As a Product Designer on Fiverr, I collaborated with clients to transform ideas into user-centered digital products by designing intuitive and visually appealing interfaces. I conducted user research, created wireframes, prototypes, and high-fidelity UI designs, while focusing on usability, accessibility, and responsive design. I worked closely with client requirements, incorporated feedback throughout the design process, and delivered solutions that balanced user needs with business goals.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 3 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-3" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">OCT 2024 - PRESENT</div>
+                        <div class="exp-col col-role">
+                            COMMUNITY MANAGER <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">UIU DEVELOPERS HUB</div>
+                        <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-3">
+                        <div class="details-content">
+                            I organized "Hackday," the biggest event of the university's CES department. Additionally, my responsibilities include discussing student development, providing assistance, and keeping track of their progress. As a Community Manager at UIU Developers Hub, I fostered an engaging and collaborative community by connecting students, facilitating discussions, and encouraging knowledge sharing among members. I supported the planning and promotion of events, managed community engagement across online and offline platforms, addressed member queries, and helped create an inclusive environment that strengthened participation and collaboration.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 4 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-4" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">DEC 2024 - APR 2026</div>
+                        <div class="exp-col col-role">
+                            ASSOCIATE (R&D WING) <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">UIU COMPUTER CLUB</div>
+                        <div class="exp-col col-type"><span class="badge-type">FULLTIME</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-4">
+                        <div class="details-content">
+                            I organized "Coders Combat," the largest event for the university's CSE department, and "Career Adda," a collaboration with Programming Hero and the UIU Computer Club. Additionally, my responsibilities included discussing and supporting students' professional development, tracking their progress, addressing their needs, and organizing workshops. I fostered an engaging and collaborative community by connecting students, facilitating discussions, and encouraging knowledge sharing among members.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 5 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-5" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">FEB 2023 - DEC 2025</div>
+                        <div class="exp-col col-role">
+                            CAMPUS HERO <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">PROGRAMMING HERO</div>
+                        <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-5">
+                        <div class="details-content">
+                            Programming Hero এন্ড UIU Computer Club এর কলাবোরেশন করে "ক্যারিয়ার আড্ডা" ইভেন্ট আয়োজন করেছিলাম। এছাড়াও স্টুডেন্টদের ডেভেলপমেন্ট নিয়ে আলোচনা করা, হেল্প করা, তাদের আপডেট নেওয়ার কাজ করতে হয়েছে আমাকে, স্টুডেন্টদের কোনো চাহিদা পূরণ করা, ওয়ার্কশপ আয়জন করার কাজ করতে হয়েছে। I contributed to research-driven initiatives, collaborated with team members to develop innovative ideas and technical solutions, and supported the planning and execution of programming-related activities.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 6 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-6" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">MAY 2024 - JAN 2025</div>
+                        <div class="exp-col col-role">
+                            PROJECT ASSOCIATE <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">FARHANAS' BRAINSTATION</div>
+                        <div class="exp-col col-type"><span class="badge-type">PART-TIME</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-6">
+                        <div class="details-content">
+                            As a Project Associate at Farhanas' Brainstation, I supported the planning, coordination, and execution of educational and organizational projects. I collaborated with team members to manage project activities, assisted in organizing events and campaigns, communicated with stakeholders, and contributed to ensuring that project goals were achieved efficiently while strengthening my organizational, teamwork, and communication skills.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 7 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-7" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">NOV 2023 - DEC 2023</div>
+                        <div class="exp-col col-role">
+                            ASSOCIATE (GRAPHICS) <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">YSSE</div>
+                        <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-7">
+                        <div class="details-content">
+                            In this position, I lead the interns and management Trainees in Graphics Design on how they can make their visuals better and more creative. Apart from this, the interns and management Trainee of the graphic design department collected various data and provided visuals to different wings on time.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 8 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-8" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">JUL 2023 - NOV 2023</div>
+                        <div class="exp-col col-role">
+                            CAMPUS AMBASSADOR <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">BYSDO</div>
+                        <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-8">
+                        <div class="details-content">
+                            As a Campus Ambassador at the Bangladesh Youth Skills Development Organization, I promoted the organization's skill development initiatives and opportunities within my university by engaging with students, raising awareness about programs and events, and encouraging active participation. I represented the organization on campus, supported outreach campaigns, and helped build a stronger student community.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Row 9 -->
+                <div class="exp-row-group">
+                    <button class="exp-row" aria-expanded="false" aria-controls="exp-detail-9" style="width:100%; text-align:left; border:none; background:none; font-family:inherit; cursor:pointer;">
+                        <div class="exp-col col-period">MAR 2023 - JUL 2023</div>
+                        <div class="exp-col col-role">
+                            MANAGEMENT TRAINEE <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-col col-company">YSSE</div>
+                        <div class="exp-col col-type"><span class="badge-type">VOLUNTEER</span></div>
+                    </button>
+                    <div class="exp-details" id="exp-detail-9">
+                        <div class="details-content">
+                            Here, I lead the interns on how they can make their visuals better and more creative. Apart from this, the interns of the graphic design department collected various data and provided visuals to different wings on time.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="research-grid">
-            
-            <div class="research-card">
-                <div class="research-meta">IEEE Access (Q1 Journal) • Nov 7, 2025</div>
-                <h3 class="research-title">
-                    <a href="https://ieeexplore.ieee.org/document/11231789?fbclid=IwY2xjawN_wC9leHRuA2FlbQIxMABicmlkETFRSFg0SkN4OG56WkMxZHNFc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjo01lGDW0iNQfJvqJIDt76_2GLaw3pHrLsw98crjWu7iJpJZ-9bASCqVjw9_aem_H-bGU1Xvu08WBv7-5dBYfw" target="_blank" rel="noopener noreferrer">
-                        Python Under the Microscope: A Comparative Energy Analysis of Execution Methods <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </h3>
-                <div class="research-desc">
-                    <p><strong>Purpose:</strong> Explores how Python can be executed more efficiently while prioritizing sustainability for global computing demand.</p>
-                    <p><strong>Problem:</strong> Lack of data on energy use and carbon emissions of Python execution methods (interpreters, compilers, hybrids) impedes progress toward green software.</p>
-                    <p><strong>Solution:</strong> Conducted a comprehensive energy-performance analysis across CPython, PyPy, Cython, ctypes, and py_compile. Proposed GreenScore, a novel composite metric integrating energy, carbon emission, and execution time.</p>
-                    <p><strong>Contribution:</strong> GreenScore provides a unified benchmark to help developers identify energy-efficient environments and design responsible software.</p>
-                </div>
-                <div class="research-authors">
-                    <strong>Authors:</strong> Fatin Shadab, Md. Mahmudul Hasan, Mehbuba Khan, Naimur Navil, Adiba Irin, Sabbir Ahmed <br>
-                    <strong>Corresponding Author:</strong> Engr. Md. Motaharul Islam
-                </div>
-            </div>
-
-            <div class="research-card">
-                <div class="research-meta">UI/UX Case Study • Tech Startup Ecosystem</div>
-                <h3 class="research-title">
-                    <a href="https://www.behance.net/gallery/237996877/GoLink-BD-Ride-Food-Courier-App-UI-UX-Case-Study" target="_blank" rel="noopener noreferrer">
-                        “GoLink BD” is a leading Bangladeshi tech startup through a secure cross-platform mobile and web ecosystem <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </h3>
-                <div class="research-desc">
-                    <p>“GoLink BD” offers ride-sharing, food delivery, and courier services through a secure cross-platform mobile and web ecosystem. The project focuses on how GoLink BD started, scaled its operations, built a safe and user-friendly environment, and adopted digital solutions to manage finances, employee systems, and long-term marketing strategies—making it a successful and sustainable business model in Bangladesh.</p>
-                </div>
-            </div>
-
-            <div class="research-card">
-                <div class="research-meta">UI/UX Case Study • Luxury Car Rental</div>
-                <h3 class="research-title">
-                    <a href="https://www.behance.net/gallery/244438513/RENTACA-Car-Rental-Web-Design-UIUX-Case-Study" target="_blank" rel="noopener noreferrer">
-                        "RENTACA" Car Rental Web Design, UI/UX Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </h3>
-                <div class="research-desc">
-                    <p>Rentaca is a high-fidelity UI/UX design for a luxury car rental web application and complete digital ecosystem. Designed with a "Modern-Premium" aesthetic, it utilizes a Bento Grid layout and high-contrast dark mode to evoke trust and performance.</p>
-                    <p><strong>Overview:</strong> Fast online booking, doorstep delivery, real-time availability, transparent pricing, and a mobile-first seamless experience with concierge-level service.</p>
-                    <p><strong>Features:</strong> Doorstep delivery, dedicated support, best value assurance, and professional chauffeurs.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ==========================================
-                SERVICES & PRICING 
+    <!-- ==========================================
+         PROJECTS SECTION
     =========================================== -->
-<section id="services" class="services section-padding">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <span class="section-subtitle">What I Do</span>
-            <h2 class="section-title">Services <span>I Offer</span></h2>
-            <p class="section-desc">Transforming ideas into innovative reality. Elevate your vision with expert product design and software development.</p>
-        </div>
-
-        <div class="services-grid">
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-object-group"></i>
-                </div>
-                <h3>UI/UX Design</h3>
-                <p>Creating intuitive and engaging user interfaces that enhance user experience and drive conversions.</p>
-                <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> User Research</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Wireframing</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Prototyping</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Usability Testing</li>
-                </ul>
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Portfolio</span>
+                <h2 class="section-title">Featured <span>Projects</span></h2>
             </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-cube"></i>
-                </div>
-                <h3>Product Design</h3>
-                <p>End-to-end product design services from concept to launch, ensuring market success and scalability.</p>
-                <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Product Strategy</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Design Systems</li>
-                    <li><i class="fa-solid fa-check-circle"></i> MVP Design</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Product Testing</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                </div>
-                <h3>Mobile App Design</h3>
-                <p>Designing beautiful and functional mobile applications for iOS and Android platforms.</p>
-                <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> iOS Design</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Android Design</li>
-                    <li><i class="fa-solid fa-check-circle"></i> App Prototyping</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Icon Design</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <h3>Web Development</h3>
-                <p>Crafting high-performance and responsive websites designed to deliver seamless user experiences.</p>
-                <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Front-End Dev</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Back-End Dev</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Database Integration</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Responsive Design</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="pricing" class="pricing section-padding">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <h2 class="section-title">Service <span>Packages</span></h2>
-            <p class="section-desc">Choose the perfect package for your project needs</p>
-        </div>
-
-        <div class="pricing-grid">
-            
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3 class="price">$700</h3>
-                    <p class="target-audience">Ideal for Startup Owners, MVP Builders</p>
-                    <h4 class="package-title">Website Design</h4>
-                </div>
-                <ul class="pricing-features">
-                    <li><i class="fa-solid fa-circle-check"></i> Design Style Guide</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Responsive across all devices</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Unlimited Revisions</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Developer Handoff</li>
-                </ul>
-                <a href="#" class="btn btn-secondary w-100">Explore More &rarr;</a>
-            </div>
-
-            <div class="pricing-card popular-card">
-                <span class="badge">POPULAR</span>
-                <div class="pricing-header">
-                    <h3 class="price">$1,500</h3>
-                    <p class="target-audience">For SaaS & fast MVP launches.</p>
-                    <h4 class="package-title">Web/Mobile App Design</h4>
-                </div>
-                <ul class="pricing-features">
-                    <li><i class="fa-solid fa-circle-check"></i> UX Research</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Design System with token</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Unlimited Revisions</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Developer handoff</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Transparent communication</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Responsive across all devices</li>
-                </ul>
-                <a href="#" class="btn btn-primary w-100">Explore More &rarr;</a>
-            </div>
-
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3 class="price">$2,000<span>+</span></h3>
-                    <p class="target-audience">Ideal for Startup or MVP</p>
-                    <h4 class="package-title">Monthly Subscription</h4>
-                </div>
-                <ul class="pricing-features">
-                    <li><i class="fa-solid fa-circle-check"></i> Monthly dedicated designers</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Adhoc design support</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Right designer for right product</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Transparent communication</li>
-                </ul>
-                <a href="#" class="btn btn-secondary w-100">Explore More &rarr;</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- ==========================================
-             DESIGN PROCESS SECTION
-=========================================== -->
-<section id="process" class="process section-padding">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <h2 class="section-title">My Design <span>Process</span></h2>
-            <p class="section-desc">A systematic approach to delivering exceptional results</p>
-        </div>
-
-        <div class="process-wrapper">
-            <!-- Connecting Line -->
-            <div class="process-line"></div>
-
-            <div class="process-grid">
+            <div class="projects-grid">
                 
-                <!-- Step 1 -->
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">01</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Skill Binimoy SRS</h3>
+                            <span class="project-role">Project Leader</span>
+                        </div>
+                        <p class="project-desc">
+                            A peer-to-peer learning platform enabling users to exchange skills and knowledge without monetary transactions. Managed overall development, focusing on functional/non-functional requirements, system architecture, and development guidelines.
+                        </p>
+                        <div class="project-tags">
+                            <span>System Architecture</span>
+                            <span>SRS</span>
+                            <span>Learning Platform</span>
                         </div>
                     </div>
-                    <h3>Discovery</h3>
-                    <p>Understanding your goals, target audience, and project requirements.</p>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Nagarik Kotha</h3>
+                            <span class="project-role">Project Leader</span>
+                        </div>
+                        <p class="project-desc">
+                            A secure, database-driven web application designed to modernize crime reporting and evidence management. Emphasizes database normalization, data integrity, and role-based access control using MySQL as the backend DBMS.
+                        </p>
+                        <div class="project-tags">
+                            <span>MySQL</span>
+                            <span>Web App</span>
+                            <span>Access Control</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>SmartFruitSorter</h3>
+                            <span class="project-role">AI/Hardware Developer</span>
+                        </div>
+                        <p class="project-desc">
+                            An AI-powered smart fruit sorting system automating fruit classification based on ripeness and quality. Integrates a conveyor belt, Raspberry Pi, Arduino, and a servo-driven robotic arm using Machine Learning and Computer Vision.
+                        </p>
+                        <div class="project-tags">
+                            <span>Machine Learning</span>
+                            <span>Computer Vision</span>
+                            <span>IoT / Arduino</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>GoLink BD</h3>
+                            <span class="project-role">Tech Startup Ecosystem</span>
+                        </div>
+                        <p class="project-desc">
+                            A leading Bangladeshi tech startup offering ride-sharing, food delivery, and courier services through a secure cross-platform mobile and web ecosystem. Built a scalable, user-friendly environment with robust digital solutions.
+                        </p>
+                        <div class="project-tags">
+                            <span>Cross-Platform</span>
+                            <span>Mobile App</span>
+                            <span>Web Ecosystem</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RESEARCH SECTION
+    =========================================== -->
+    <section id="research" class="research section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Publications & UX Research</span>
+                <h2 class="section-title">Research & <span>Case Studies</span></h2>
+            </div>
+            <div class="research-grid">
+                
+                <article class="research-card">
+                    <div class="research-meta">IEEE Access (Q1 Journal) • Nov 7, 2025</div>
+                    <h3 class="research-title">
+                        <a href="https://ieeexplore.ieee.org/document/11231789?fbclid=IwY2xjawN_wC9leHRuA2FlbQIxMABicmlkETFRSFg0SkN4OG56WkMxZHNFc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjo01lGDW0iNQfJvqJIDt76_2GLaw3pHrLsw98crjWu7iJpJZ-9bASCqVjw9_aem_H-bGU1Xvu08WBv7-5dBYfw" target="_blank" rel="noopener noreferrer">
+                            Python Under the Microscope: A Comparative Energy Analysis of Execution Methods <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </h3>
+                    <div class="research-desc">
+                        <p><strong>Purpose:</strong> Explores how Python can be executed more efficiently while prioritizing sustainability for global computing demand.</p>
+                        <p><strong>Problem:</strong> Lack of data on energy use and carbon emissions of Python execution methods (interpreters, compilers, hybrids) impedes progress toward green software.</p>
+                        <p><strong>Solution:</strong> Conducted a comprehensive energy-performance analysis across CPython, PyPy, Cython, ctypes, and py_compile. Proposed GreenScore, a novel composite metric integrating energy, carbon emission, and execution time.</p>
+                        <p><strong>Contribution:</strong> GreenScore provides a unified benchmark to help developers identify energy-efficient environments and design responsible software.</p>
+                    </div>
+                    <div class="research-authors">
+                        <strong>Authors:</strong> Fatin Shadab, Md. Mahmudul Hasan, Mehbuba Khan, Naimur Navil, Adiba Irin, Sabbir Ahmed <br>
+                        <strong>Corresponding Author:</strong> Engr. Md. Motaharul Islam
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <div class="research-meta">UI/UX Case Study • Tech Startup Ecosystem</div>
+                    <h3 class="research-title">
+                        <a href="https://www.behance.net/gallery/237996877/GoLink-BD-Ride-Food-Courier-App-UI-UX-Case-Study" target="_blank" rel="noopener noreferrer">
+                            “GoLink BD” is a leading Bangladeshi tech startup through a secure cross-platform mobile and web ecosystem <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </h3>
+                    <div class="research-desc">
+                        <p>“GoLink BD” offers ride-sharing, food delivery, and courier services through a secure cross-platform mobile and web ecosystem. The project focuses on how GoLink BD started, scaled its operations, built a safe and user-friendly environment, and adopted digital solutions to manage finances, employee systems, and long-term marketing strategies—making it a successful and sustainable business model in Bangladesh.</p>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <div class="research-meta">UI/UX Case Study • Luxury Car Rental</div>
+                    <h3 class="research-title">
+                        <a href="https://www.behance.net/gallery/244438513/RENTACA-Car-Rental-Web-Design-UIUX-Case-Study" target="_blank" rel="noopener noreferrer">
+                            "RENTACA" Car Rental Web Design, UI/UX Case Study <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </h3>
+                    <div class="research-desc">
+                        <p>Rentaca is a high-fidelity UI/UX design for a luxury car rental web application and complete digital ecosystem. Designed with a "Modern-Premium" aesthetic, it utilizes a Bento Grid layout and high-contrast dark mode to evoke trust and performance.</p>
+                        <p><strong>Overview:</strong> Fast online booking, doorstep delivery, real-time availability, transparent pricing, and a mobile-first seamless experience with concierge-level service.</p>
+                        <p><strong>Features:</strong> Doorstep delivery, dedicated support, best value assurance, and professional chauffeurs.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES & PRICING 
+    =========================================== -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">What I Do</span>
+                <h2 class="section-title">Services <span>I Offer</span></h2>
+                <p class="section-desc">Transforming ideas into innovative reality. Elevate your vision with expert product design and software development.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fa-solid fa-object-group"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user interfaces that enhance user experience and drive conversions.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> User Research</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Wireframing</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Prototyping</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Usability Testing</li>
+                    </ul>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">02</span>
-                        <div class="step-icon">
-                            <i class="fa-regular fa-lightbulb"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fa-solid fa-cube"></i>
                     </div>
-                    <h3>Research</h3>
-                    <p>Conducting user research and competitive analysis to inform design decisions.</p>
+                    <h3>Product Design</h3>
+                    <p>End-to-end product design services from concept to launch, ensuring market success and scalability.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Product Strategy</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Design Systems</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> MVP Design</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Product Testing</li>
+                    </ul>
                 </div>
 
-                <!-- Step 3 -->
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">03</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fa-solid fa-mobile-screen"></i>
                     </div>
-                    <h3>Design</h3>
-                    <p>Creating wireframes, mockups, and interactive prototypes.</p>
+                    <h3>Mobile App Design</h3>
+                    <p>Designing beautiful and functional mobile applications for iOS and Android platforms.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> iOS Design</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Android Design</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> App Prototyping</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Icon Design</li>
+                    </ul>
                 </div>
 
-                <!-- Step 4 -->
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">04</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-flask"></i>
-                        </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fa-solid fa-code"></i>
                     </div>
-                    <h3>Testing</h3>
-                    <p>Validating designs through usability testing and gathering feedback.</p>
+                    <h3>Web Development</h3>
+                    <p>Crafting high-performance and responsive websites designed to deliver seamless user experiences.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Front-End Dev</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Back-End Dev</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Database Integration</li>
+                        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Service <span>Packages</span></h2>
+                <p class="section-desc">Choose the perfect package for your project needs</p>
+            </div>
+            <div class="pricing-grid">
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="price">$700</h3>
+                        <p class="target-audience">Ideal for Startup Owners, MVP Builders</p>
+                        <h4 class="package-title">Website Design</h4>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Design Style Guide</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Responsive across all devices</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Unlimited Revisions</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Developer Handoff</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary w-100">Explore More &rarr;</a>
                 </div>
 
-                <!-- Step 5 -->
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">05</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-rocket"></i>
-                        </div>
+                <div class="pricing-card popular-card">
+                    <span class="badge">POPULAR</span>
+                    <div class="pricing-header">
+                        <h3 class="price">$1,500</h3>
+                        <p class="target-audience">For SaaS & fast MVP launches.</p>
+                        <h4 class="package-title">Web/Mobile App Design</h4>
                     </div>
-                    <h3>Delivery</h3>
-                    <p>Delivering final designs with comprehensive documentation and support.</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> UX Research</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Design System with token</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Unlimited Revisions</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Developer handoff</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Transparent communication</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Responsive across all devices</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary w-100">Explore More &rarr;</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="price">$2,000<span>+</span></h3>
+                        <p class="target-audience">Ideal for Startup or MVP</p>
+                        <h4 class="package-title">Monthly Subscription</h4>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Monthly dedicated designers</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Adhoc design support</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Right designer for right product</li>
+                        <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Transparent communication</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary w-100">Explore More &rarr;</a>
                 </div>
 
             </div>
         </div>
-    </div>
-</section>
- <!-- ==========================================
-                Rest Process Section
-    =========================================== -->
+    </section>
 
+    <!-- ==========================================
+         DESIGN PROCESS SECTION
+    =========================================== -->
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">My Design <span>Process</span></h2>
+                <p class="section-desc">A systematic approach to delivering exceptional results</p>
+            </div>
+            <div class="process-wrapper">
+                <div class="process-line"></div>
+                <div class="process-grid">
+                    
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">01</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        </div>
+                        <h3>Discovery</h3>
+                        <p>Understanding your goals, target audience, and project requirements.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">02</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-regular fa-lightbulb"></i></div>
+                        </div>
+                        <h3>Research</h3>
+                        <p>Conducting user research and competitive analysis to inform design decisions.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">03</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-pen"></i></div>
+                        </div>
+                        <h3>Design</h3>
+                        <p>Creating wireframes, mockups, and interactive prototypes.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">04</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-flask"></i></div>
+                        </div>
+                        <h3>Testing</h3>
+                        <p>Validating designs through usability testing and gathering feedback.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">05</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
+                        </div>
+                        <h3>Delivery</h3>
+                        <p>Delivering final designs with comprehensive documentation and support.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         WEB DEVELOPMENT PROCESS SECTION
+    =========================================== -->
     <section id="web-process" class="process section-padding theme-pink">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <h2 class="section-title">Website Development <span>Process</span></h2>
-            <p class="section-desc">Creating high-performance websites with modern technologies</p>
-        </div>
-
-        <div class="process-wrapper">
-            <div class="process-line"></div>
-            <div class="process-grid">
-                
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">01</span>
-                        <div class="step-icon">
-                            <i class="fa-regular fa-lightbulb"></i>
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Website Development <span>Process</span></h2>
+                <p class="section-desc">Creating high-performance websites with modern technologies</p>
+            </div>
+            <div class="process-wrapper">
+                <div class="process-line"></div>
+                <div class="process-grid">
+                    
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">01</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-regular fa-lightbulb"></i></div>
                         </div>
+                        <h3>Planning</h3>
+                        <p>Defining website goals, sitemap, and technical requirements.</p>
                     </div>
-                    <h3>Planning</h3>
-                    <p>Defining website goals, sitemap, and technical requirements.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">02</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-code"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">02</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
                         </div>
+                        <h3>Development</h3>
+                        <p>Building responsive website with modern web technologies.</p>
                     </div>
-                    <h3>Development</h3>
-                    <p>Building responsive website with modern web technologies.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">03</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-vial"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">03</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-vial"></i></div>
                         </div>
+                        <h3>Testing</h3>
+                        <p>Cross-browser testing and ensuring responsive design works perfectly.</p>
                     </div>
-                    <h3>Testing</h3>
-                    <p>Cross-browser testing and ensuring responsive design works perfectly.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">04</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-gear"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">04</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-gear"></i></div>
                         </div>
+                        <h3>Optimization</h3>
+                        <p>Performance optimization, SEO implementation, and accessibility.</p>
                     </div>
-                    <h3>Optimization</h3>
-                    <p>Performance optimization, SEO implementation, and accessibility.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">05</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-rocket"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">05</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
                         </div>
+                        <h3>Launch</h3>
+                        <p>Deploying to production with ongoing maintenance and support.</p>
                     </div>
-                    <h3>Launch</h3>
-                    <p>Deploying to production with ongoing maintenance and support.</p>
-                </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="android-process" class="process section-padding theme-green">
-    <div class="container">
-        
-        <div class="section-header text-center">
-            <h2 class="section-title">Android Development <span>Process</span></h2>
-            <p class="section-desc">Building robust Android applications from concept to deployment</p>
-        </div>
-
-        <div class="process-wrapper">
-            <div class="process-line"></div>
-            <div class="process-grid">
-                
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">01</span>
-                        <div class="step-icon">
-                            <i class="fa-regular fa-lightbulb"></i>
+    <!-- ==========================================
+         ANDROID DEVELOPMENT PROCESS SECTION
+    =========================================== -->
+    <section id="android-process" class="process section-padding theme-green">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Android Development <span>Process</span></h2>
+                <p class="section-desc">Building robust Android applications from concept to deployment</p>
+            </div>
+            <div class="process-wrapper">
+                <div class="process-line"></div>
+                <div class="process-grid">
+                    
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">01</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-regular fa-lightbulb"></i></div>
                         </div>
+                        <h3>Planning</h3>
+                        <p>Defining app requirements, features, and technical architecture.</p>
                     </div>
-                    <h3>Planning</h3>
-                    <p>Defining app requirements, features, and technical architecture.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">02</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-file-code"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">02</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-file-code"></i></div>
                         </div>
+                        <h3>Development</h3>
+                        <p>Building native Android app with Kotlin/Java and modern frameworks.</p>
                     </div>
-                    <h3>Development</h3>
-                    <p>Building native Android app with Kotlin/Java and modern frameworks.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">03</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-vial"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">03</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-vial"></i></div>
                         </div>
+                        <h3>Testing</h3>
+                        <p>Comprehensive testing across multiple Android devices and OS versions.</p>
                     </div>
-                    <h3>Testing</h3>
-                    <p>Comprehensive testing across multiple Android devices and OS versions.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">04</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-gear"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">04</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-gear"></i></div>
                         </div>
+                        <h3>Optimization</h3>
+                        <p>Performance tuning, bug fixes, and ensuring smooth user experience.</p>
                     </div>
-                    <h3>Optimization</h3>
-                    <p>Performance tuning, bug fixes, and ensuring smooth user experience.</p>
-                </div>
 
-                <div class="process-step">
-                    <div class="step-icon-wrapper">
-                        <span class="step-number">05</span>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-box-open"></i>
+                    <div class="process-step">
+                        <div class="step-icon-wrapper">
+                            <span class="step-number">05</span>
+                            <div class="step-icon" aria-hidden="true"><i class="fa-solid fa-box-open"></i></div>
                         </div>
+                        <h3>Deployment</h3>
+                        <p>Publishing to Google Play Store with proper documentation.</p>
                     </div>
-                    <h3>Deployment</h3>
-                    <p>Publishing to Google Play Store with proper documentation.</p>
-                </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
- <!-- ==========================================
-               CTA SECTION CSS
+    <!-- ==========================================
+         CTA SECTION
     =========================================== -->
     <section class="cta-section section-padding">
-    <div class="container">
-        <div class="cta-box">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let's work together to bring your vision to life. Get in touch to discuss your project requirements.</p>
-            <a href="#contact" class="btn btn-white">Let's Talk <i class="fa-solid fa-comment-dots"></i></a>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="container footer-grid">
-        
-        <div class="footer-col brand-col">
-            <h3 class="footer-logo">Sabbir Ahmed</h3>
-            <p>Crafting exceptional user experiences through innovative design solutions and robust software engineering. Empowering the next generation of digital products.</p>
-            <div class="footer-social">
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-solid fa-globe"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-behance"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#research">Research</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Support</h4>
-            <ul>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Case Studies</a></li>
-                <li><a href="#research">Publications</a></li>
-                
-            </ul>
-        </div>
-
-    </div>
-    
-    <div class="footer-bottom text-center">
         <div class="container">
-            <p>&copy; 2026 Sabbir Ahmed. All rights reserved.</p>
+            <div class="cta-box">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's work together to bring your vision to life. Get in touch to discuss your project requirements.</p>
+                <a href="#contact" class="btn btn-white">Let's Talk <i class="fa-solid fa-comment-dots" aria-hidden="true"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
-
-  <!-- ==========================================
-              CONTACT & BOOKING SECTION CSS
-    =========================================== -->
-    <section id="contact" class="contact-section section-padding">
-    <div class="container">
-        
-        <div class="contact-wrapper">
-            
-            <div class="contact-left">
-                <div class="profile-header">
-                    <img src="assets/images/profile-placeholder.png" alt="Sabbir Ahmed" class="contact-avatar">
-                    <span class="contact-name">SABBIR AHMED</span>
-                </div>
-                
-                <h2 class="contact-heading">BOOK A QUICK CALL</h2>
-                <p class="contact-bio">Product Designer & Software Engineer • Building scalable digital products and human-centered ecosystems.</p>
-                
-                <div class="meeting-meta">
-                    <span><i class="fa-regular fa-clock"></i> 30M</span>
-                    <span><i class="fa-solid fa-video"></i> GOOGLE MEET</span>
-                </div>
-
-                <div class="calendar-ui">
-                    <div class="calendar-header">
-                        <button id="prev-month"><i class="fa-solid fa-chevron-left"></i></button>
-                        <h4 id="current-month-year">July 2026</h4>
-                        <button id="next-month"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-                    
-                    <div class="calendar-body">
-                        <div class="days-grid">
-                            <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
-                        </div>
-                        <div class="dates-grid" id="dates-grid">
-                            </div>
-                    </div>
-                    
-                    <div class="timezone-info">
-                        Bangladesh Time (GMT+6)
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-right">
-                <div class="form-header">
-                    <span class="sub-label">TELL ME ABOUT YOUR PROJECT</span>
-                    <h2>HAVE A PROJECT IDEA IN MIND?</h2>
-                </div>
-
-                <div class="selected-time-box">
-                    <div class="time-icon">
-                        <i class="fa-regular fa-calendar-check"></i>
-                    </div>
-                    <div class="time-details">
-                        <span class="time-label">SELECTED TIME SLOT</span>
-                        <h4 id="selected-datetime-display">Please select a date and time</h4>
-                    </div>
-                </div>
-
-                <form id="project-form" class="project-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">NAME *</label>
-                            <input type="text" id="name" placeholder="Your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">EMAIL *</label>
-                            <input type="email" id="email" placeholder="name@company.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">SERVICE *</label>
-                        <select id="service" required>
-                            <option value="" disabled selected>Select a service...</option>
-                            <option value="UI/UX Design">UI/UX Design</option>
-                            <option value="Web Development">Web Development</option>
-                            <option value="Mobile App Design">Mobile App Design</option>
-                            <option value="Product Design">Product Design</option>
-                            <option value="Others">Others</option>
-                        </select>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="location">LOCATION *</label>
-                            <input type="text" id="location" placeholder="City, Country" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">BUDGET (USD) *</label>
-                            <input type="number" id="budget" placeholder="e.g. 5000" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="details">ABOUT THE PROJECT *</label>
-                        <textarea id="details" rows="4" placeholder="Tell me a bit about your project goals and requirements..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        SEND PROJECT DETAILS <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
-
-            </div>
-            
-            <div class="time-slots-container">
-                <h4>AVAILABLE TIMES</h4>
-                <div class="slots-list" id="slots-list">
-                    </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ==========================================
-                JAVASCRIPT
+         CONTACT SECTION
     =========================================== -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <!-- Left Column -->
+                <div class="contact-left">
+                    <div class="profile-header">
+                        <img src="assets/images/profile-placeholder.png" alt="Sabbir Ahmed" class="contact-avatar" loading="lazy">
+                        <span class="contact-name">SABBIR AHMED</span>
+                    </div>
+                    <h2 class="contact-heading">BOOK A QUICK CALL</h2>
+                    <p class="contact-bio">Product Designer & Software Engineer • Building scalable digital products and human-centered ecosystems.</p>
+                    
+                    <div class="meeting-meta">
+                        <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 30M</span>
+                        <span><i class="fa-solid fa-video" aria-hidden="true"></i> GOOGLE MEET</span>
+                    </div>
 
+                    <div class="calendar-ui" aria-label="Meeting Calendar">
+                        <div class="calendar-header">
+                            <button id="prev-month" aria-label="Previous Month"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                            <h4 id="current-month-year" aria-live="polite">July 2026</h4>
+                            <button id="next-month" aria-label="Next Month"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="days-grid" aria-hidden="true">
+                                <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+                            </div>
+                            <div class="dates-grid" id="dates-grid"></div>
+                        </div>
+                        <div class="timezone-info">Bangladesh Time (GMT+6)</div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Form) -->
+                <div class="contact-right">
+                    <div class="form-header">
+                        <span class="sub-label">TELL ME ABOUT YOUR PROJECT</span>
+                        <h2>HAVE A PROJECT IDEA IN MIND?</h2>
+                    </div>
+
+                    <div class="selected-time-box">
+                        <div class="time-icon" aria-hidden="true">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </div>
+                        <div class="time-details">
+                            <span class="time-label">SELECTED TIME SLOT</span>
+                            <h4 id="selected-datetime-display" aria-live="polite">Please select a date and time</h4>
+                        </div>
+                    </div>
+
+                    <form id="project-form" class="project-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">NAME *</label>
+                                <input type="text" id="name" placeholder="Your full name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">EMAIL *</label>
+                                <input type="email" id="email" placeholder="name@company.com" required autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">SERVICE *</label>
+                            <select id="service" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Mobile App Design">Mobile App Design</option>
+                                <option value="Product Design">Product Design</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="location">LOCATION *</label>
+                                <input type="text" id="location" placeholder="City, Country" required autocomplete="country-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">BUDGET (USD) *</label>
+                                <input type="number" id="budget" placeholder="e.g. 5000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details">ABOUT THE PROJECT *</label>
+                            <textarea id="details" rows="4" placeholder="Tell me a bit about your project goals and requirements..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            SEND PROJECT DETAILS <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column (Time Slots) -->
+                <div class="time-slots-container">
+                    <h4>AVAILABLE TIMES</h4>
+                    <div class="slots-list" id="slots-list"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">Sabbir Ahmed</h3>
+                <p>Crafting exceptional user experiences through innovative design solutions and robust software engineering. Empowering the next generation of digital products.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Website"><i class="fa-solid fa-globe" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#research">Research</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Case Studies</a></li>
+                    <li><a href="#research">Publications</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Sabbir Ahmed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
     <script src="script.js"></script>
 
 </body>
-
 </html>
