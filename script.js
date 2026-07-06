@@ -108,6 +108,36 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
 
     // =========================
+    // Process Tabs
+    // =========================
+    const processTabs = document.querySelectorAll('.process-tab');
+    const processPanels = document.querySelectorAll('.process-panel');
+
+    if (processTabs.length && processPanels.length) {
+        processTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-target');
+
+                processTabs.forEach(btn => {
+                    const isActive = btn === tab;
+                    btn.classList.toggle('active', isActive);
+                    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+
+                processPanels.forEach(panel => {
+                    const isActivePanel = panel.getAttribute('data-panel') === target;
+                    panel.classList.toggle('active', isActivePanel);
+                    panel.style.display = isActivePanel ? 'block' : 'none';
+                });
+            });
+        });
+
+        processPanels.forEach(panel => {
+            panel.style.display = panel.classList.contains('active') ? 'block' : 'none';
+        });
+    }
+
+    // =========================
     // Experience Accordion A11y
     // =========================
     const expRows = document.querySelectorAll('.exp-row');
